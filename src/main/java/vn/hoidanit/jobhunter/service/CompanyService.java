@@ -43,7 +43,7 @@ public class CompanyService {
         return null;
     }
 
-    public void deleteCompanyById(long id) {
+    public void handleDeleteCompany(long id) {
         this.companyRepository.deleteById(id);
     }
 
