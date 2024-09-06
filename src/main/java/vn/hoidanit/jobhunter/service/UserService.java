@@ -23,6 +23,10 @@ public class UserService {
         return null;
     }
 
+    public User getUserByUsername(String username) {
+        return this.userRepository.findByEmail(username);
+    }
+
     public List<User> getAllUsers() {
         return this.userRepository.findAll();
     }
