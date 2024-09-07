@@ -25,6 +25,8 @@ public class UserDetailsCustom implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("username/password incorrect");
         }
-        return new User(user.getEmail(),user.getPassword(), Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
+        return new User(user.getEmail(),
+                user.getPassword()
+                , Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
     }
 }
